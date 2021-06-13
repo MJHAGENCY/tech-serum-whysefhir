@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Whyse Fhir</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <style>
+  .starter-template {
+    padding: 3rem 1.5rem;
+  }
+    
+  #locations a.collapsed:before {
+    content: '+ Show More';
+  }
+
+  #locations a:before {
+    content: '- Show Less';
+  }
+    
+  #locations li {    
+    margin: 10px 0;
+  }  
+    
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+    
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+    
+  @media (min-width: 992px) { 
+    .video-container {
+      padding-top: 0;
+    }    
+    
+    .responsive-iframe {
+      position: relative;
+      width: 420px;
+      height: 315px;
+    }
+  }  
+  </style>
+</head>
+
+<body>
+
+  <h1 class="text-center bg-primary text-white pb-2">Whyse Fhir</h1>
+  
+  <main role="main" class="container">
+    <div class="starter-template">
+      
+      <h4>A Phase II trial of drug ACP for patients with metastatic melanoma.</h4>
+      <p>Hi <span id="patient-name">Tony Stark</span>,</p>
+      <p>
+        This is a study that is looking at the efficacy of drug <a href="#!" data-toggle="popover" data-placement="bottom" title="ACP" data-content="ACP is classified as a &quot;biologic response modifier&quot; that modify the body's response to cancer cells and hopefully improve the body's natural response to infection and disease.">ACP</a> in patients whose <a href="#!" data-toggle="popover" data-placement="bottom" title="Melanoma" data-content="A form of skin cancer that begins in the cells that control the pigment in your skin.">melanoma</a> has spread to other parts of the body, but not to the brain. 
+        Patients must have never received any medicines for their disease. 
+        Patients must have normal liver, kidney and heart function. 
+        Any <a href="#!" data-toggle="popover" data-placement="bottom" title="Tumor Mutation" data-content="A specific genetic change in the cancer cells that is not seen in healthy cells.">tumor mutation</a> is permitted. 
+        All patients will receive drug ACP. 
+        Drug ACP works by sticking to your melanoma cells and cutting off their ability to move and cuts off the blood supply to the melanoma. 
+        This medicine tries to “paralyze and starve” your cancer.
+      </p>
+
+      <h5>Locations</h5>
+      <ul class="list-unstyled" id="locations">
+        <li>Banner University Medical Center, Phoenix, Arizona, United States</li>
+        <li>University of Arkansas Medical Sciences, Little Rock, Arkansas, United States</li>
+        <li>Scripps Clinical Medical Group, La Jolla, California, United States</li>
+        <div class="collapse" id="collapseLocations">
+          <li>UCLA - Ronald Reagan Medical Center, Los Angeles, California, United States</li>
+          <li>Riverside University, Moreno Valley, California, United States</li>
+          <li>UC Irvine Medical Center, Orange, California, United States</li>
+          <li>Stanford University Medical Center, Palo Alto, California, United States</li>
+          <li>UCLA Medical Center - Santa Monica, Santa Monica, California, United States</li>
+          <li>Medstar Washington Hospital Center, Washington, District of Columbia, United States</li>
+          <li>University of Florida-Jacksonville, Jacksonville, Florida, United States</li>
+        </div>
+        <li> <a class="collapsed" href="#" data-toggle="collapse" data-target="#collapseLocations" aria-expanded="false" aria-controls="collapseLocations"></a></li>
+      </ul>
+     
+      <h5>If you're interested in this clinical trial, discuss with your doctor.</h5>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <a href="#!"><i class="bi-chat"></i></a>
+           <div>Post questions about this trial to our bot.</div>
+        </div>
+        <div class="col-md-6 text-center">
+          <a href="#!"><i class="bi-telephone"></i></a>
+          <div>Call this institution's office.</div>
+        </div>  
+      </div>
+
+      <div class="text-center mt-3 video-container">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/PdB08BLaTlE">
+    </iframe>
+      </div>
+
+      <div class="text-center mt-3">
+      <a class="btn btn-primary" role="button" href="#!">Read more on <br/>ClinicalTrials.gov</a>
+      </div>
+      
+    </div>
+  </main>
+</body>
+
+  <script>
+  $(document).ready(function() {
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    });
+
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  });
+  </script>  
+  
+</html>
